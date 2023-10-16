@@ -1,22 +1,14 @@
 package proj1;
 
 public class DateOfBirth {
-    public int birthDay;
     public int birthMonth;
+    public int birthDay;
     public int birthYear;
 
-    public DateOfBirth(int birthDay, int birthMonth, int birthYear){
-        this.birthDay = birthDay;
+    public DateOfBirth(int birthMonth, int birthDay, int birthYear){
         this.birthMonth = birthMonth;
-        this.birthYear = birthYear;
-    }
-
-    public int getBirthDay(){
-        return birthDay;
-    }
-
-    public void setBirthDay(int birthDay){
         this.birthDay = birthDay;
+        this.birthYear = birthYear;
     }
 
     public int getBirthMonth(){
@@ -25,6 +17,14 @@ public class DateOfBirth {
 
     public void setBirthMonth(int birthMonth){
         this.birthMonth = birthMonth;
+    }
+
+    public int getBirthDay(){
+        return birthDay;
+    }
+
+    public void setBirthDay(int birthDay){
+        this.birthDay = birthDay;
     }
 
     public int getBirthYear(){
