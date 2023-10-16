@@ -1,9 +1,12 @@
 package proj1;
 
+import java.util.Scanner;
+
 public class DateOfBirth {
-    public int birthMonth;
-    public int birthDay;
-    public int birthYear;
+    Scanner keyboard = new Scanner(System.in);
+    int birthMonth;
+    int birthDay;
+    int birthYear;
 
     public DateOfBirth(int birthMonth, int birthDay, int birthYear){
         this.birthMonth = birthMonth;
