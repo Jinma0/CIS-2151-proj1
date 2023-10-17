@@ -20,6 +20,6 @@ public class HeartRateDemo {
         System.out.println("Patient's birth year: ");
         int birthYear = Integer.parseInt(keyboard.nextLine());
 
-        DateOfBirth dateOfBirth = new DateOfBirth(birthMonth, birthDay, birthYear);
+        PersonHeartRate personHeartRate = new PersonHeartRate(firstName, lastName, birthMonth, birthDay, birthYear);
     }
 }

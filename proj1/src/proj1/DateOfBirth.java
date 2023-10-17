@@ -1,5 +1,7 @@
 package proj1;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 public class DateOfBirth {
@@ -36,5 +38,12 @@ public class DateOfBirth {
 
     public void setBirthYear(int birthYear){
         this.birthYear = birthYear;
+    }
+
+    public Period calculateAge(int birthMonth, int birthDay, int birthYear){
+        LocalDate birthDate = LocalDate.of(birthYear, birthDay, birthYear);
+        LocalDate todaysDate = LocalDate.now();
+        Period patientAge = Period.between(birthDate, todaysDate);
+        return patientAge;
     }
 }
