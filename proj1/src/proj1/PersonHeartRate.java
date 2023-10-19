@@ -10,12 +10,12 @@ public class PersonHeartRate {
     int birthDay;
     int birthYear;
 
-    public PersonHeartRate(String firstName, String lastName, int birthMonth, int birthDay, int birthYear){
+    DateOfBirth birthDate = new DateOfBirth(birthMonth, birthDay, birthYear);
+
+    public PersonHeartRate(String firstName, String lastName, DateOfBirth birthDate){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthMonth = birthMonth;
-        this.birthDay = birthDay;
-        this.birthYear = birthYear;
+        this.birthDate = birthDate;
     }
 
     public String getFirstName(){

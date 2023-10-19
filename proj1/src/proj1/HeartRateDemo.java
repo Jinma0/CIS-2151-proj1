@@ -1,5 +1,6 @@
 package proj1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HeartRateDemo {
@@ -20,9 +21,11 @@ public class HeartRateDemo {
         System.out.println("Patient's birth year (YYYY): ");
         int birthYear = Integer.parseInt(keyboard.nextLine());
 
-        PersonHeartRate personHeartRate = new PersonHeartRate(firstName, lastName, birthMonth, birthDay, birthYear);
+        PersonHeartRate personHeartRate = new PersonHeartRate(firstName, lastName, new DateOfBirth());
         DateOfBirth dateOfBirth = new DateOfBirth(birthMonth, birthDay, birthYear);
 
-        personHeartRate.printData();
+        ArrayList<PersonHeartRate> heartRateList = new ArrayList<>();
+
+
     }
 }
