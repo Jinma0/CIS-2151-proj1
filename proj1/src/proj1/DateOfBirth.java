@@ -3,37 +3,37 @@ package proj1;
 import java.util.Scanner;
 
 public class DateOfBirth {
-    int birthMonth;
-    int birthDay;
-    int birthYear;
+    int month;
+    int day;
+    int year;
 
-    public DateOfBirth(int birthMonth, int birthDay, int birthYear){
-        this.birthMonth = birthMonth;
-        this.birthDay = birthDay;
-        this.birthYear = birthYear;
+    public DateOfBirth(int month, int day, int year){
+        this.month = month;
+        this.day = day;
+        this.year = year;
     }
 
-    public int getBirthMonth(){
-        return birthMonth;
+    public int getMonth(){
+        return month;
     }
 
-    public void setBirthMonth(int birthMonth){
-        this.birthMonth = birthMonth;
+    public void setMonth(int month){
+        this.month = month;
     }
 
-    public int getBirthDay(){
-        return birthDay;
+    public int getDay(){
+        return day;
     }
 
-    public void setBirthDay(int birthDay){
-        this.birthDay = birthDay;
+    public void setDay(int day){
+        this.day = day;
     }
 
-    public int getBirthYear(){
-        return birthYear;
+    public int getYear(){
+        return year;
     }
 
-    public void setBirthYear(int birthYear){
-        this.birthYear = birthYear;
+    public void setYear(int year){
+        this.year = year;
     }
 }

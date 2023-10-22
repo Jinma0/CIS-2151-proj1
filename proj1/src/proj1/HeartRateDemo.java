@@ -21,11 +21,12 @@ public class HeartRateDemo {
         System.out.println("Patient's birth year (YYYY): ");
         int birthYear = Integer.parseInt(keyboard.nextLine());
 
-        PersonHeartRate personHeartRate = new PersonHeartRate(firstName, lastName, new DateOfBirth());
-        DateOfBirth dateOfBirth = new DateOfBirth(birthMonth, birthDay, birthYear);
+        DateOfBirth dateOfBirth = new DateOfBirth(birthYear, birthMonth, birthDay);
+
+        PersonHeartRate personHeartRate = new PersonHeartRate(firstName, lastName, dateOfBirth);
+
+        System.out.println(personHeartRate.maxHeartRate());
 
         ArrayList<PersonHeartRate> heartRateList = new ArrayList<>();
-
-
     }
 }

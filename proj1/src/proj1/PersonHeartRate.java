@@ -6,11 +6,10 @@ import java.time.Period;
 public class PersonHeartRate {
     String firstName;
     String lastName;
-    int birthMonth;
-    int birthDay;
-    int birthYear;
-
-    DateOfBirth birthDate = new DateOfBirth(birthMonth, birthDay, birthYear);
+    int month;
+    int day;
+    int year;
+    DateOfBirth birthDate = new DateOfBirth(year, day, month);
 
     public PersonHeartRate(String firstName, String lastName, DateOfBirth birthDate){
         this.firstName = firstName;
@@ -34,39 +33,39 @@ public class PersonHeartRate {
         this.lastName = lastName;
     }
 
-    public int getBirthMonth(){
-        return birthMonth;
+    public int getMonth(){
+        return month;
     }
 
-    public void setBirthMonth(int birthMonth){
-        this.birthMonth = birthMonth;
+    public void setMonth(int month){
+        this.month = month;
     }
 
-    public int getBirthDay(){
-        return birthDay;
+    public int getDay(){
+        return day;
     }
 
-    public void setBirthDay(int birthDay){
-        this.birthDay = birthDay;
+    public void setDay(int day){
+        this.day = day;
     }
 
-    public int getBirthYear(){
-        return birthYear;
+    public int getYear(){
+        return year;
     }
 
-    public void setBirthYear(int birthYear){
-        this.birthYear = birthYear;
+    public void setYear(int year){
+        this.year = year;
     }
 
-    public int calculateAge(int birthMonth, int birthDay, int birthYear){
-        LocalDate birthDate = LocalDate.of(birthMonth, birthDay, birthYear);
+    public int calculateAge(int year, int month, int day){
+        LocalDate birthDate = LocalDate.of(getYear(), getMonth(),getDay());
         LocalDate todaysDate = LocalDate.now();
         Period patientAge = Period.between(birthDate, todaysDate);
         return Integer.parseInt(String.valueOf(patientAge));
     }
 
     public int maxHeartRate(){
-        return 220 - calculateAge(birthMonth, birthDay, birthYear);
+        return 220 - calculateAge(year, month, day);
     }
 
     public int printData(){
