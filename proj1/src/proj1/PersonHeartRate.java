@@ -47,13 +47,13 @@ public class PersonHeartRate {
 
     public String targetHeartRateRange(){
         int lowRange = maxHeartRate() / 2;
-        int highRange = (85 / maxHeartRate()) * 100;
+        int highRange = (maxHeartRate() * 85) / 100;
         return lowRange + " - " + highRange;
     }
 
-    public void printData(){
-        System.out.println(lastName + ", " + firstName);
-        System.out.println("Max heart rate: " + maxHeartRate());
-        System.out.println("Target heart rate: " + targetHeartRateRange());
+    public String printData(){
+        return lastName + ", " + firstName + "\n" +
+                "Max heart rate: " + maxHeartRate() + "\n" +
+                "Target heart rate: " + targetHeartRateRange() + "\n";
     }
 }

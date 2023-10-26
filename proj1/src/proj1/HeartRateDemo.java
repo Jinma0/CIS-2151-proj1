@@ -1,17 +1,17 @@
 package proj1;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HeartRateDemo {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
+        ArrayList<PersonHeartRate> heartRateList = new ArrayList<>();
 
         String exitCommand = "";
 
 
-        while (!exitCommand.equalsIgnoreCase("exit")){
+        while (!exitCommand.equalsIgnoreCase("no")){
             System.out.println("Patient's first name: ");
             String firstName = keyboard.nextLine();
 
@@ -29,21 +29,17 @@ public class HeartRateDemo {
 
             DateOfBirth dateOfBirth = new DateOfBirth(birthMonth, birthDay, birthYear);
             PersonHeartRate personHeartRate = new PersonHeartRate(firstName, lastName, dateOfBirth);
-            ArrayList<PersonHeartRate> heartRateList = new ArrayList<>();
             heartRateList.add(personHeartRate);
 
-            System.out.println("Enter the number 1 to submit another patient, or enter exit to print data...");
+            System.out.println("Enter another?");
             exitCommand = keyboard.nextLine();
 
-            if (exitCommand.equalsIgnoreCase("1")){
-                exitCommand = "exit";
-            } else if (exitCommand.equalsIgnoreCase("exit")) {
-                for (PersonHeartRate phr : heartRateList){
-                    phr.printData();
-                }
-            } else {
-                exitCommand = "exit";
+            if (!exitCommand.equalsIgnoreCase("no")){
+                exitCommand = "";
             }
+        }
+        for (PersonHeartRate phr: heartRateList){
+            System.out.println(phr.printData());
         }
     }
 }
